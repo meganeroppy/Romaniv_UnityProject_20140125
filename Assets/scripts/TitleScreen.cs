@@ -41,6 +41,8 @@ public class TitleScreen : MonoBehaviour {
 	public GUIStyle format_credits;
 	private bool displaying = false;
 
+	public bool debugMsg = false;
+
 	// Use this for initialization
 	void Start () {
 		logo_width = w * 0.8f;
@@ -98,6 +100,9 @@ public class TitleScreen : MonoBehaviour {
 
 			GUI.Box(new Rect(0, 0, w, h), "PRODUCER -> CHIKA TAKEUCHI\nCHARACTER DESIGNER -> CHIKA TAKEUCHI\nINTERFACE DESIGNER -> MIZUKI KASHIWAGI\n GAME PROGRAMMER -> WATARU FUKUSHIMA", format_credits);
 			
+		}
+		if(debugMsg){
+			GUI.Box(new Rect(0, 0, w, h), "既知の不具合として最初数プレイは処理がとても重いです\n後のバージョンアップで修正予定です", format_credits);
 		}
 
 	}

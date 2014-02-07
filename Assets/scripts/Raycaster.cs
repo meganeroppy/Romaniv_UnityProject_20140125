@@ -11,6 +11,8 @@ public class Raycaster : MonoBehaviour {
 	private Vector2 RayOrigin;
 	private Vector2 direction;
 
+	public float ObstaclePercent = 25.0f;
+
 	private int layerMask = LayerMask.NameToLayer("Ground"); 
 	// Use this for initialization
 	void Start () {
@@ -18,17 +20,16 @@ public class Raycaster : MonoBehaviour {
 
 		//Debug.Log("layerMask = " + layerMask.ToString());
 
-		int seed = (int)Mathf.Floor(Random.value * 10.0f % 5.0f);
-
+		int seed = (int)Mathf.Floor(Random.value * 1000.0f % 101.0f);
 		//Debug.Log(seed);
 		RayOrigin = this.transform.position;
 		RootPos =  Physics2D.Raycast( RayOrigin, new Vector2(0.0f, -10.0f), 100.0f);
 		//Debug.Log( RootPos.collider);
 
-		if(seed <= 3){
-			hairPointPrefab = Instantiate(hairPoint, RootPos.point, this.transform.rotation) as GameObject;
-		}else{
+		if(seed <= ObstaclePercent){
 			obstaclePrefab = Instantiate(obstacle, RootPos.point, this.transform.rotation) as GameObject;
+		}else{
+			hairPointPrefab = Instantiate(hairPoint, RootPos.point, this.transform.rotation) as GameObject;
 		}
 		Destroy(this.gameObject);
 	}

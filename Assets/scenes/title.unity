@@ -497,6 +497,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  debugMsg: 1
 --- !u!23 &1413866238
 Renderer:
   m_ObjectHideFlags: 0
