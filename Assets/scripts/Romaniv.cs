@@ -7,16 +7,18 @@ public class Romaniv : MonoBehaviour {
 	private float t_time;
 
 	//status
-	public float speed = 8.0f;
-	public float jumpSpeed = 10.0f;
+//	public float speed = 8.0f;
+	public float speed = 80.0f;
+
+	public float jumpForce = 1000.0f;
 //	public float re_attack_delay = 0.5f;
 //	private bool attackable = true;
-	private enum STATUS{RUN, STOP, JUMP, SLAP, DEAD};
-	private STATUS cur_status;
-	private enum JUMP_STATUS{ACSEND, DESCEND};
-	private JUMP_STATUS cur_j_status;
-	private float cur_jumpSpeed;
+	public enum STATUS{RUN, STOP, JUMP, SLAP, DEAD};
+	public STATUS cur_status;
+	public enum JUMP_STATUS{ACSEND, DESCEND};
+	public JUMP_STATUS cur_j_status;
 
+	private const float MAX_SPEED = 5.0f;
 
 	private bool gameOver = false;
 
@@ -43,7 +45,7 @@ public class Romaniv : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		cur_j_status = JUMP_STATUS.DESCEND;
+		cur_j_status = JUMP_STATUS.ACSEND;
 		//playerLayer = LayerMask.NameToLayer("Player");
 		groundLayer = LayerMask.NameToLayer("Ground");
 
@@ -55,11 +57,12 @@ public class Romaniv : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 //		Debug.Log("cur_status = " + cur_status.ToString());
 
 		/////////////
 		/// 
+		//print("velocity.y = " + rigidbody2D.velocity.y);
 
 		switch(cur_status){
 			case STATUS.RUN:
@@ -67,31 +70,35 @@ public class Romaniv : MonoBehaviour {
 		//			attackable = true;
 		//		}
 
-				transform.Translate(Vector2.right * speed * Time.deltaTime);	//walking right direction
-				//transform.Translate(new Vector2(speed * Time.deltaTime, 0) );	//walking right direction
+			//this.rigidbody2D.AddForce( new Vector2(speed * Time.deltaTime, 0.0f));	//walking right direction
+			transform.Translate(Vector2.right * speed * Time.deltaTime);	//walking right direction
 				
 			GameController.advance += Time.deltaTime;
+
 				break;
 			case STATUS.STOP:
 				break;
 			case STATUS.JUMP:
+				//rigidbody2D.AddForce(Vector2.right * speed * Time.deltaTime);	//walking right direction
 				transform.Translate(Vector2.right * speed * Time.deltaTime);	//walking right direction
 				GameController.advance += Time.deltaTime;
 
+
+			//print(cur_jumpSpeed);
 				switch(cur_j_status){
+
 						case JUMP_STATUS.ACSEND:
 							//Debug.Log("acsending..");
-
-							transform.Translate(Vector2.up * cur_jumpSpeed * Time.deltaTime);
-				cur_jumpSpeed += Physics.gravity.y * Time.deltaTime;
-				//Debug.Log("cur_jumpSpeed = " + cur_jumpSpeed.ToString());
-							if(cur_jumpSpeed <= 0.0f){
+//							rigidbody2D.AddForce(Vector2.up * cur_jumpSpeed);
+//							cur_jumpSpeed += Physics2D.gravity.y * Time.deltaTime;
+							//Debug.Log("cur_jumpSpeed = " + cur_jumpSpeed.ToString());
+							if(rigidbody2D.velocity.y < 0){
 								cur_j_status = JUMP_STATUS.DESCEND;
 
 							}
 							break;
 						case JUMP_STATUS.DESCEND:
-					//Debug.Log("decsending..");
+							Debug.Log("decsending..");
 						//	if(IsGrounded()){
 						//		print ("grounded!!");
 						//		cur_status = STATUS.RUN;
@@ -104,6 +111,7 @@ public class Romaniv : MonoBehaviour {
 				break;
 			case STATUS.SLAP:
 				transform.Translate(Vector2.right * speed * Time.deltaTime);	//walking right direction
+				//rigidbody2D.AddForce(Vector2.right * speed * Time.deltaTime);	//walking right direction
 				GameController.advance += Time.deltaTime;
 
 				anim.SetTrigger("slap_t");
@@ -126,7 +134,10 @@ public class Romaniv : MonoBehaviour {
 	}
 	public void jump(){
 		if(cur_status == STATUS.RUN){
-			cur_jumpSpeed = jumpSpeed;
+			////
+			rigidbody2D.AddForce( new Vector2(0.0f, jumpForce));
+
+			////
 			anim.SetTrigger("jump_t");
 			cur_status = STATUS.JUMP;
 			cur_j_status = JUMP_STATUS.ACSEND;
@@ -155,8 +166,10 @@ public class Romaniv : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll){
 		//print ("crash with an object -> " + coll.gameObject.name.ToString());
-		if(coll.gameObject.tag == "ground" && cur_j_status == JUMP_STATUS.DESCEND){
+		if(coll.gameObject.tag == "ground"){
+			anim.SetTrigger("run_t");
 			cur_status = STATUS.RUN;
+			cur_j_status = JUMP_STATUS.ACSEND;
 		}else{
 		//Debug.Log("OnCollisionEnter2D was called, might have hit something. > " + coll.gameObject.name.ToString());
 

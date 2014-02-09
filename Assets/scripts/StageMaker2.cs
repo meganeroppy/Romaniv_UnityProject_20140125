@@ -21,6 +21,8 @@ public class StageMaker2 : MonoBehaviour {
 	public float distanceToSwitch;
 	private float switch_x;
 	private int seed;
+
+	public bool SafeRun = false;
 	//private float GapOfPosY = 0.0f;
 	private float curRightEnd = 0.0f;
 
@@ -82,9 +84,12 @@ public class StageMaker2 : MonoBehaviour {
 		makeSwitchPrefab = Instantiate(makeSwitch, this.transform.position, this.transform.rotation) as GameObject;
 		switch_x = makeSwitchPrefab.transform.position.x;
 		curRightEnd = rightEndPos[seed];
-		raycasterPrefab = Instantiate(raycaster, new Vector3(this.transform.position.x - 4.0f, this.transform.position.y + 10.0f, this.transform.position.z), this.transform.rotation) as GameObject;
-		raycasterPrefab = Instantiate(raycaster, new Vector3(this.transform.position.x + 4.0f, this.transform.position.y + 10.0f, this.transform.position.z), this.transform.rotation) as GameObject;
+		if(!SafeRun){
+			raycasterPrefab = Instantiate(raycaster, new Vector3(this.transform.position.x - 4.0f, this.transform.position.y + 10.0f, this.transform.position.z), this.transform.rotation) as GameObject;
+			raycasterPrefab = Instantiate(raycaster, new Vector3(this.transform.position.x + 4.0f, this.transform.position.y + 10.0f, this.transform.position.z), this.transform.rotation) as GameObject;
+		}
 	}
+
 
 
 }

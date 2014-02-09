@@ -41,6 +41,18 @@ MonoBehaviour:
   tex_btn_jump: {fileID: 2800000, guid: fd089d768b01d2e419147036c1adc7f0, type: 3}
   tex_btn_slap: {fileID: 2800000, guid: 93f80381f4ae510479f720cdd095ea8b, type: 3}
   tex_btn_pause: {fileID: 2800000, guid: 8024a9b75023ea34aa52bf7e448473a7, type: 3}
+  tex_score: {fileID: 2800000, guid: 589d93d7389fae5448c463d2c56192c9, type: 3}
+  tex_num:
+  - {fileID: 2800000, guid: 396dc3f8aad3bbb409eb3d4ae008f542, type: 3}
+  - {fileID: 2800000, guid: 5ecc95a6ad2c0b4468a66e441fdd9507, type: 3}
+  - {fileID: 2800000, guid: d438fd9b383ef024c93bbb360baa6d76, type: 3}
+  - {fileID: 2800000, guid: 0ff6b8823a9d6d04daac781ddec04c33, type: 3}
+  - {fileID: 2800000, guid: 55cb9416e67818c4aaa2291ab2b1a113, type: 3}
+  - {fileID: 2800000, guid: a7669a5e47043434ab052bdac435bdf2, type: 3}
+  - {fileID: 2800000, guid: 4933fd7e08fb82548adb96869d0b6fb9, type: 3}
+  - {fileID: 2800000, guid: b095087c283c5fa419f677aa38a34aaa, type: 3}
+  - {fileID: 2800000, guid: 41a3800ced176904baec75375f415d26, type: 3}
+  - {fileID: 2800000, guid: f3234863e0c926a46a03cea069aa3ba3, type: 3}
   PauseMenu: {fileID: 100000, guid: 8743d11cda7495144bb645bebe57119c, type: 2}
 --- !u!1001 &100100000
 Prefab:
