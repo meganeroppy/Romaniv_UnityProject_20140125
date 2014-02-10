@@ -25,14 +25,16 @@ public class PauseMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetKey("b")){
+			Resume();
+		}
 	
 	}
 	void OnGUI(){
 		GUI.Box(new Rect (margin_side, margin_updown, w - (margin_side * 2), h - (margin_updown * 2)), " ");
 
 		if(GUI.Button(new Rect(w * 0.5f - (slct_btn_width * 0.5f), h * 0.2f, slct_btn_width, slct_btn_height), btn_resume, GUIStyle.none)){
-			GameController.resume();
-			Destroy(this.gameObject);
+			Resume();
 		}
 
 		if(GUI.Button(new Rect(w * 0.5f - (slct_btn_width * 0.5f), h * 0.45f, slct_btn_width, slct_btn_height), btn_restart, GUIStyle.none)){
@@ -43,5 +45,10 @@ public class PauseMenu : MonoBehaviour {
 		if(GUI.Button(new Rect(w * 0.5f - (slct_btn_width * 0.5f), h * 0.7f, slct_btn_width, slct_btn_height), btn_quit2, GUIStyle.none)){
 			Application.LoadLevel("title");
 		}
+	}
+
+	void Resume(){
+		GameController.resume();
+		Destroy(this.gameObject);
 	}
 }

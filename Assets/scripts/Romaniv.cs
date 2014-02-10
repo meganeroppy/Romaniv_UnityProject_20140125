@@ -4,15 +4,20 @@ using System.Collections;
 public class Romaniv : MonoBehaviour {
 
 	//system
-	private float t_time;
+	private float wait_to_dispResult;
+
+	private const float TIME_TO_REUSE_SLAP = 1.5f;
+	private float wait_to_slap = 0.0f;
+	private bool SlapIsReady = true;
+
+	private const float TIME_TO_REUSE_JUMP = 1.0f;
+	private float wait_to_jump = 0.0f;
+	private bool JumpIsReady = true;
 
 	//status
-//	public float speed = 8.0f;
 	public float speed = 80.0f;
-
 	public float jumpForce = 1000.0f;
-//	public float re_attack_delay = 0.5f;
-//	private bool attackable = true;
+
 	public enum STATUS{RUN, STOP, JUMP, SLAP, DEAD};
 	public STATUS cur_status;
 	public enum JUMP_STATUS{ACSEND, DESCEND};
@@ -31,18 +36,14 @@ public class Romaniv : MonoBehaviour {
 	//game objects
 	public GameObject attack_zone;
 	public GameObject explosion;
-
 	private GameObject ground;
 	private CircleCollider2D circleCollider;
-
-
+	
 	private int playerLayer;
 	private int groundLayer;
 
-	private static  Vector2 tmp;
-	
-	
-	
+//	private static  Vector2 tmp;
+
 	// Use this for initialization
 	void Start () {
 		cur_j_status = JUMP_STATUS.ACSEND;
@@ -55,18 +56,34 @@ public class Romaniv : MonoBehaviour {
 		cur_status = STATUS.JUMP;
 		anim = GetComponent<Animator>();
 	}
+
+	void Update(){
+
+
+		if(!SlapIsReady){
+			wait_to_slap -= 1.0f * Time.deltaTime;
+			if(wait_to_slap <= 0.0f){
+				SlapIsReady = true;
+			}
+		}
+
+		if(!JumpIsReady){
+			wait_to_jump -= 1.0f * Time.deltaTime;
+			if(wait_to_jump <= 0.0f){
+				JumpIsReady = true;
+			}
+		}
+	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
+
 //		Debug.Log("cur_status = " + cur_status.ToString());
 
-		/////////////
-		/// 
 		//print("velocity.y = " + rigidbody2D.velocity.y);
 
 		switch(cur_status){
 			case STATUS.RUN:
-		//		if(!attackable && t_time - Time.realtimeSinceStartup * Time.deltaTime >= re_attack_delay ){
+		//		if(!attackable && wait_to_dispResult - Time.realtimeSinceStartup * Time.deltaTime >= re_attack_delay ){
 		//			attackable = true;
 		//		}
 
@@ -98,7 +115,7 @@ public class Romaniv : MonoBehaviour {
 							}
 							break;
 						case JUMP_STATUS.DESCEND:
-							Debug.Log("decsending..");
+						//	Debug.Log("decsending..");
 						//	if(IsGrounded()){
 						//		print ("grounded!!");
 						//		cur_status = STATUS.RUN;
@@ -121,7 +138,7 @@ public class Romaniv : MonoBehaviour {
 				cur_status = STATUS.RUN;
 				break;
 			case STATUS.DEAD:
-				if(Time.realtimeSinceStartup - t_time >= 3.0f && !gameOver){
+				if(Time.realtimeSinceStartup - wait_to_dispResult >= 3.0f && !gameOver){
 					Instantiate(resultDispley);
 				GameController.switchScene("result");
 					gameOver = true;
@@ -133,21 +150,26 @@ public class Romaniv : MonoBehaviour {
 
 	}
 	public void jump(){
-		if(cur_status == STATUS.RUN){
-			////
-			rigidbody2D.AddForce( new Vector2(0.0f, jumpForce));
-
-			////
-			anim.SetTrigger("jump_t");
-			cur_status = STATUS.JUMP;
-			cur_j_status = JUMP_STATUS.ACSEND;
+		if(JumpIsReady){
+			if(cur_status == STATUS.RUN){
+				rigidbody2D.AddForce( new Vector2(0.0f, jumpForce));
+				anim.SetTrigger("jump_t");
+				cur_status = STATUS.JUMP;
+				cur_j_status = JUMP_STATUS.ACSEND;
+				wait_to_jump = TIME_TO_REUSE_JUMP;
+				JumpIsReady = false;
+			}
 		}
 	}
 	
 	public void slap(){
-		if(cur_status == STATUS.RUN){
-			anim.SetTrigger("slap_t");
-			cur_status = STATUS.SLAP;
+		if(SlapIsReady){
+			if(cur_status == STATUS.RUN){
+				anim.SetTrigger("slap_t");
+				cur_status = STATUS.SLAP;
+				wait_to_slap = TIME_TO_REUSE_SLAP;
+				SlapIsReady = false;
+			}
 		}
 	}
 
@@ -181,8 +203,11 @@ public class Romaniv : MonoBehaviour {
 		this.renderer.enabled = false;
 		this.rigidbody2D.isKinematic = true;
 		Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
-		t_time = Time.realtimeSinceStartup;
+		wait_to_dispResult = Time.realtimeSinceStartup;
+		Destroy(this.gameObject.transform);
 	}
+
+	/*
 	bool IsGrounded(){
 		Debug.Log("tmp = " + tmp.ToString() );
 		tmp =  Physics2D.Raycast(this.transform.position, new Vector2(0, -1), 0.0f).point;
@@ -191,4 +216,5 @@ public class Romaniv : MonoBehaviour {
 		return true;
 //		return Physics.Raycast(transform.position, new Vector3(0, -1, 0), this.circleCollider.radius);
 	}
+	*/
 }

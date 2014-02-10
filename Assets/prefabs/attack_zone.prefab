@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IS_INVISIBLE: 1
-  timeToReuse: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

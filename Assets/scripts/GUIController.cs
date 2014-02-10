@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GUIController : MonoBehaviour {
@@ -24,14 +24,20 @@ public class GUIController : MonoBehaviour {
 	private float act_btn_height = 120.0f;
 	private float pause_btn_size = 60.0f;
 
-	//score
+	//collected hair
 	private Rect score_field;
 	private Rect advance_field;
 
-	public Texture tex_score;
-	public Texture[] tex_num = new Texture[10];
+	public Texture2D[] tex_num = new Texture2D[10];
+	public Texture2D tex_ke;
+	//private float size_tex;
+	public Texture2D tex_hon;
 	private float size_font_score;
-	//private uint digit = 1;
+	private uint digit = 1;
+
+	//advance
+	public Texture2D tex_hitohada;
+	public Texture2D tex_cm;
 
 
 	//Pause Menu
@@ -58,35 +64,56 @@ public class GUIController : MonoBehaviour {
 		if(Input.GetKey("s")){
 			romaniv.SendMessage("slap",SendMessageOptions.DontRequireReceiver);
 		}
+		if(Input.GetKey("p") && GameController.cur_scene != GameController.SCENE.PAUSE){
+			Pause();
+		}
 
-		GUI.TextField(advance_field, "advance : " + Mathf.Floor(GameController.advance).ToString() + " CM");
+
 
 
 		//Score Display
-
-		/*
-		GUI.Box(new Rect(margin_side * 0.5f, margin_updown, 130, 130), tex_score, GUIStyle.none);
+	
+		GUI.Box(new Rect(margin_side * 0.5f, margin_updown, size_font_score, size_font_score), tex_ke, GUIStyle.none);
 
 		digit = getDigits(GameController.score);
 
-		for(uint i = 0 ; i < digit ; i++){
-			if(i >= 1 ){
-				GUI.Box(new Rect(margin_side * 3.5f - ( 0.8f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.score / 10], GUIStyle.none);
+		for(uint i = digit ; i != 0 ; i--){
+			if(i > 1 ){
+				GUI.Box(new Rect(w * 0.09f - ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.score / 10], GUIStyle.none);
 			}else{
-				GUI.Box(new Rect(margin_side * 3.5f + ((margin_side *  0.8f) * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.score % 10], GUIStyle.none);
+				GUI.Box(new Rect(w * 0.09f + ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.score % 10], GUIStyle.none);
+			}
+		}
+		//GUI.TextField(score_field, "Collected Hair : " + GameController.score.ToString());
+
+//		GUI.TextField(advance_field, "advance : " + Mathf.Floor(GameController.advance).ToString() + " CM");
+
+		GUI.Box(new Rect(w * 0.2f, margin_updown * 0.5f, size_font_score * 3.0f, size_font_score * 3.0f), tex_hitohada, GUIStyle.none);
+
+		digit = getDigits((int)GameController.advance);
+
+		for(uint i = digit ; i != 0 ; i--){
+			if(i > 1 ){
+				for(uint j = 0 ; j < i ; j++){
+					int tmp = (int)GameController.advance;
+					tmp /= 10;
+				}
+
+				GUI.Box(new Rect(w * 0.37f - ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.advance / 10], GUIStyle.none);
+			}else{
+				GUI.Box(new Rect(w * 0.37f + ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.advance % 10], GUIStyle.none);
 			}
 		}
 
-		*/
-		GUI.TextField(score_field, "Collected Hair : " + GameController.score.ToString());
+		GUI.Box(new Rect(w * 0.45f, margin_updown * 0.5f, size_font_score * 1.5f, size_font_score * 1.5f), tex_cm, GUIStyle.none);
+
 
 		//
 		bool btn_jump = GUI.Button(new Rect(Screen.width - act_btn_width, Screen.height - act_btn_height, act_btn_width, act_btn_height), tex_btn_jump, GUIStyle.none);
 		bool btn_slap = GUI.Button(new Rect(0, Screen.height - act_btn_height, act_btn_width, act_btn_height), tex_btn_slap, GUIStyle.none);
 		if(GameController.cur_scene != GameController.SCENE.PAUSE){
 			if( GUI.Button(new Rect(w - pause_btn_size - margin_side, margin_updown, pause_btn_size, pause_btn_size), tex_btn_pause, GUIStyle.none)){
-				GameController.cur_scene = GameController.SCENE.PAUSE;
-				GameObject pauseMenuPrefab = Instantiate(PauseMenu) as GameObject;
+				Pause();
 			}
 		}
 		if(btn_jump){
@@ -96,6 +123,11 @@ public class GUIController : MonoBehaviour {
 			romaniv.SendMessage("slap",SendMessageOptions.DontRequireReceiver);
 		}
 
+	}
+
+	void Pause(){
+		GameController.cur_scene = GameController.SCENE.PAUSE;
+		GameObject pauseMenuPrefab = Instantiate(PauseMenu) as GameObject;
 	}
 
 	uint getDigits(int num){

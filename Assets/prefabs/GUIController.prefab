@@ -41,18 +41,21 @@ MonoBehaviour:
   tex_btn_jump: {fileID: 2800000, guid: fd089d768b01d2e419147036c1adc7f0, type: 3}
   tex_btn_slap: {fileID: 2800000, guid: 93f80381f4ae510479f720cdd095ea8b, type: 3}
   tex_btn_pause: {fileID: 2800000, guid: 8024a9b75023ea34aa52bf7e448473a7, type: 3}
-  tex_score: {fileID: 2800000, guid: 589d93d7389fae5448c463d2c56192c9, type: 3}
   tex_num:
-  - {fileID: 2800000, guid: 396dc3f8aad3bbb409eb3d4ae008f542, type: 3}
-  - {fileID: 2800000, guid: 5ecc95a6ad2c0b4468a66e441fdd9507, type: 3}
-  - {fileID: 2800000, guid: d438fd9b383ef024c93bbb360baa6d76, type: 3}
-  - {fileID: 2800000, guid: 0ff6b8823a9d6d04daac781ddec04c33, type: 3}
-  - {fileID: 2800000, guid: 55cb9416e67818c4aaa2291ab2b1a113, type: 3}
-  - {fileID: 2800000, guid: a7669a5e47043434ab052bdac435bdf2, type: 3}
-  - {fileID: 2800000, guid: 4933fd7e08fb82548adb96869d0b6fb9, type: 3}
-  - {fileID: 2800000, guid: b095087c283c5fa419f677aa38a34aaa, type: 3}
-  - {fileID: 2800000, guid: 41a3800ced176904baec75375f415d26, type: 3}
-  - {fileID: 2800000, guid: f3234863e0c926a46a03cea069aa3ba3, type: 3}
+  - {fileID: 2800000, guid: e31ad1ac7aef7a541adef18ee336d67f, type: 3}
+  - {fileID: 2800000, guid: 0fd63f0aaccd9744e8abd9e39663566c, type: 3}
+  - {fileID: 2800000, guid: feb428333de4017458b6fbc067a3daae, type: 3}
+  - {fileID: 2800000, guid: 171fce1ea4b92674aab8297e324c595f, type: 3}
+  - {fileID: 2800000, guid: c64954adf1d084240b4dae55631809ba, type: 3}
+  - {fileID: 2800000, guid: 39a338ccfcec75b49921f349f09fe510, type: 3}
+  - {fileID: 2800000, guid: cd2e0dbf80731eb469523586ec94e6ac, type: 3}
+  - {fileID: 2800000, guid: cffb347b1507ac64c832b2fec1ef5696, type: 3}
+  - {fileID: 2800000, guid: 0ab373e5a11173d48aef0f6f21db2efa, type: 3}
+  - {fileID: 2800000, guid: 0d639cc4ba3c00b42a9cb8fb7a2eeee2, type: 3}
+  tex_ke: {fileID: 2800000, guid: 157a48d15d9aad64c93db99b714fba8c, type: 3}
+  tex_hon: {fileID: 2800000, guid: 357f847874cd4e242a1dc309aa5129d3, type: 3}
+  tex_hitohada: {fileID: 2800000, guid: 615022057f60734449b9ca47dc7dd13c, type: 3}
+  tex_cm: {fileID: 2800000, guid: 55cc22912e0edca49888c8e9205ed030, type: 3}
   PauseMenu: {fileID: 100000, guid: 8743d11cda7495144bb645bebe57119c, type: 2}
 --- !u!1001 &100100000
 Prefab:
