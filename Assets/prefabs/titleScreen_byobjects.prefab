@@ -29,7 +29,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: TitleScreen_byobjects
+  m_Name: titleScreen_byobjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

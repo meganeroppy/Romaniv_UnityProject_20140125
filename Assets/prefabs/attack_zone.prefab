@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 23: {fileID: 2300000}
   m_Layer: 0
-  m_Name: Attack_zone
+  m_Name: attack_zone
   m_TagString: attack_zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
