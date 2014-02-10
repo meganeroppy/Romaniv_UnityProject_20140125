@@ -73,35 +73,56 @@ public class GUIController : MonoBehaviour {
 
 		//Score Display
 	
-		GUI.Box(new Rect(margin_side * 0.5f, margin_updown, size_font_score, size_font_score), tex_ke, GUIStyle.none);
+		GUI.Box(new Rect(w * 0.008f, margin_updown, size_font_score, size_font_score), tex_ke, GUIStyle.none);
 
 		digit = getDigits(GameController.score);
 
 		for(uint i = digit ; i != 0 ; i--){
-			if(i > 1 ){
-				GUI.Box(new Rect(w * 0.09f - ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.score / 10], GUIStyle.none);
+			if(i > 1 ){	
+				int tmp = (int)GameController.score;
+				//Debug.Log(tmp);
+				
+				for(uint j = i ; j > 1 ; j--){
+					tmp /= 10;
+				}
+				tmp %= 10;
+				GUI.Box(new Rect(w * 0.13f - ( w * 0.03f * i), margin_updown, size_font_score, size_font_score), tex_num[tmp], GUIStyle.none);
+				
 			}else{
-				GUI.Box(new Rect(w * 0.09f + ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.score % 10], GUIStyle.none);
+				int tmp = (int)GameController.advance;
+				tmp %= 10;
+				
+				GUI.Box(new Rect(w * 0.13f - ( w * 0.03f * i), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.score % 10], GUIStyle.none);
 			}
 		}
+
+		GUI.Box(new Rect(w * 0.14f, margin_updown, size_font_score, size_font_score), tex_hon, GUIStyle.none);
+
+
 		//GUI.TextField(score_field, "Collected Hair : " + GameController.score.ToString());
 
-//		GUI.TextField(advance_field, "advance : " + Mathf.Floor(GameController.advance).ToString() + " CM");
+		//GUI.TextField(advance_field, "advance : " + Mathf.Floor(GameController.advance).ToString() + " CM");
 
 		GUI.Box(new Rect(w * 0.2f, margin_updown * 0.5f, size_font_score * 3.0f, size_font_score * 3.0f), tex_hitohada, GUIStyle.none);
 
 		digit = getDigits((int)GameController.advance);
 
 		for(uint i = digit ; i != 0 ; i--){
-			if(i > 1 ){
-				for(uint j = 0 ; j < i ; j++){
-					int tmp = (int)GameController.advance;
+			if(i > 1 ){	
+				int tmp = (int)GameController.advance;
+				//Debug.Log(tmp);
+
+				for(uint j = i ; j > 1 ; j--){
 					tmp /= 10;
 				}
+				tmp %= 10;
+				GUI.Box(new Rect(w * 0.43f - ( w * 0.03f * i), margin_updown, size_font_score, size_font_score), tex_num[tmp], GUIStyle.none);
 
-				GUI.Box(new Rect(w * 0.37f - ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.advance / 10], GUIStyle.none);
 			}else{
-				GUI.Box(new Rect(w * 0.37f + ( w * 0.007f * (i + 1)), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.advance % 10], GUIStyle.none);
+				int tmp = (int)GameController.advance;
+				tmp %= 10;
+
+				GUI.Box(new Rect(w * 0.43f - ( w * 0.03f * i), margin_updown, size_font_score, size_font_score), tex_num[(int)GameController.advance % 10], GUIStyle.none);
 			}
 		}
 

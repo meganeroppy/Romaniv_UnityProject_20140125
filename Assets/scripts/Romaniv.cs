@@ -6,13 +6,15 @@ public class Romaniv : MonoBehaviour {
 	//system
 	private float wait_to_dispResult;
 
-	private const float TIME_TO_REUSE_SLAP = 1.5f;
+	private const float TIME_TO_REUSE_SLAP = 1.0f;
 	private float wait_to_slap = 0.0f;
 	private bool SlapIsReady = true;
 
 	private const float TIME_TO_REUSE_JUMP = 1.0f;
 	private float wait_to_jump = 0.0f;
 	private bool JumpIsReady = true;
+
+	private const float START_POS_X = 0.0f;
 
 	//status
 	public float speed = 80.0f;
@@ -77,6 +79,8 @@ public class Romaniv : MonoBehaviour {
 	
 	void FixedUpdate () {
 
+		GameController.advance = this.transform.position.x - START_POS_X ;
+
 //		Debug.Log("cur_status = " + cur_status.ToString());
 
 		//print("velocity.y = " + rigidbody2D.velocity.y);
@@ -90,7 +94,7 @@ public class Romaniv : MonoBehaviour {
 			//this.rigidbody2D.AddForce( new Vector2(speed * Time.deltaTime, 0.0f));	//walking right direction
 			transform.Translate(Vector2.right * speed * Time.deltaTime);	//walking right direction
 				
-			GameController.advance += Time.deltaTime;
+			//GameController.advance += Time.deltaTime;
 
 				break;
 			case STATUS.STOP:
@@ -98,7 +102,7 @@ public class Romaniv : MonoBehaviour {
 			case STATUS.JUMP:
 				//rigidbody2D.AddForce(Vector2.right * speed * Time.deltaTime);	//walking right direction
 				transform.Translate(Vector2.right * speed * Time.deltaTime);	//walking right direction
-				GameController.advance += Time.deltaTime;
+			//	GameController.advance += Time.deltaTime;
 
 
 			//print(cur_jumpSpeed);
@@ -129,7 +133,7 @@ public class Romaniv : MonoBehaviour {
 			case STATUS.SLAP:
 				transform.Translate(Vector2.right * speed * Time.deltaTime);	//walking right direction
 				//rigidbody2D.AddForce(Vector2.right * speed * Time.deltaTime);	//walking right direction
-				GameController.advance += Time.deltaTime;
+			//	GameController.advance += Time.deltaTime;
 
 				anim.SetTrigger("slap_t");
 				GameObject atk = 
