@@ -485,7 +485,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 05dad9230c833b1499f03caa1462e325, type: 2}
   - {fileID: 100000, guid: e6625954f863776478261a64f706e2cd, type: 2}
   - {fileID: 100000, guid: c6e962825c3d9e14bb0d326d3cee8395, type: 2}
-  - {fileID: 100000, guid: 5aa34e0d503d86b4f8af30bc6a4ac9ed, type: 2}
+  - {fileID: 100004, guid: 60bc40de8d735c542bf36663c0ee96c8, type: 2}
   - {fileID: 100002, guid: a1f253d268ed50c4591cae363168d114, type: 2}
   - {fileID: 100002, guid: f99d375045172f546b94e25f6d455c1a, type: 2}
   - {fileID: 100002, guid: 99db0def3f0af8e479a4673e9272d73a, type: 2}
@@ -646,7 +646,7 @@ GameObject:
   - 82: {fileID: 1345324029}
   - 114: {fileID: 1345324028}
   m_Layer: 0
-  m_Name: SoundManager
+  m_Name: soundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -858,6 +858,10 @@ Prefab:
       propertyPath: stage.Array.data[13]
       value: 
       objectReference: {fileID: 100004, guid: 2ca3bcbf15655cb49a7724bd54e0397f, type: 2}
+    - target: {fileID: 11400000, guid: 7190aa13fdfb82f438846622e1978581, type: 2}
+      propertyPath: stage.Array.data[3]
+      value: 
+      objectReference: {fileID: 100004, guid: 60bc40de8d735c542bf36663c0ee96c8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7190aa13fdfb82f438846622e1978581, type: 2}
   m_RootGameObject: {fileID: 771358722}
