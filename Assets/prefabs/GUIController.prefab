@@ -35,13 +35,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3798108a2bffe2b4c936cd0e904bdf3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aa47c56258df4e0f994589e9d8e137c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tex_btn_jump: {fileID: 2800000, guid: fd089d768b01d2e419147036c1adc7f0, type: 3}
-  tex_btn_slap: {fileID: 2800000, guid: 93f80381f4ae510479f720cdd095ea8b, type: 3}
-  tex_btn_pause: {fileID: 2800000, guid: 8024a9b75023ea34aa52bf7e448473a7, type: 3}
-  PauseMenu: {fileID: 100000, guid: 8743d11cda7495144bb645bebe57119c, type: 2}
+  tex_btn_jump: {fileID: 2800000, guid: b5f00a438e63b4bfd9ab5ba82d190854, type: 3}
+  tex_btn_slap: {fileID: 2800000, guid: 0acdb6264940d488da027b65a5f2c0fc, type: 3}
+  tex_btn_pause: {fileID: 2800000, guid: 7489f8b95a128401199da22ec78328f9, type: 3}
+  PauseMenu: {fileID: 100000, guid: 9037bdf94db9f488c91caf8bb693520e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
