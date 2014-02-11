@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 23: {fileID: 2300000}
   m_Layer: 0
-  m_Name: Attack_zone
+  m_Name: attack_zone
   m_TagString: attack_zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e23683ecc5a47024da0924e67aac3d91, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bcfb3738024f4df080fbdd6327a838a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IS_INVISIBLE: 1

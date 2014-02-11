@@ -18,25 +18,25 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 913ddaf300993b64c8278a9dde87d8a7, type: 3}
+      value: {fileID: 21300000, guid: 3d0b9bb7c102448c1aa9982bc262251d, type: 3}
     - time: .0833333358
-      value: {fileID: 21300000, guid: 7b3a3891ce93d134ebea95915c99e387, type: 3}
+      value: {fileID: 21300000, guid: e31611a1255fe468d9afa5629aaff036, type: 3}
     - time: .166666672
-      value: {fileID: 21300000, guid: 952ff63cfb925084c9607c1243b89a48, type: 3}
+      value: {fileID: 21300000, guid: 81b26a77e1d2e4222930f3e9a9241306, type: 3}
     - time: .25
-      value: {fileID: 21300000, guid: 6b0300f947563424c9eaa4c087e52986, type: 3}
+      value: {fileID: 21300000, guid: 6299af88321a646d6ba86b363ef641b7, type: 3}
     - time: .333333343
-      value: {fileID: 21300000, guid: d76b7e5373f317b4696c92d6222f061c, type: 3}
-    - time: .416666687
-      value: {fileID: 21300000, guid: 40dfe6fd945b92949b5e9ac9d9f5d31d, type: 3}
+      value: {fileID: 21300000, guid: 47d8e8cea6cc74774908a7f99fcffa49, type: 3}
+    - time: .416666657
+      value: {fileID: 21300000, guid: 9b2cff9a4a2af482f9ebda1921b0fa5c, type: 3}
     - time: .5
-      value: {fileID: 21300000, guid: ffc4e16057b46b347b074ccca7a311fd, type: 3}
+      value: {fileID: 21300000, guid: f3810fdaf38d14ea3b290a314f3feda5, type: 3}
     - time: .583333313
-      value: {fileID: 21300000, guid: e856ce234f339674f8ca0d03fea1e3d2, type: 3}
-    - time: .666666627
-      value: {fileID: 21300000, guid: 84a8d80d38f59b5468cd80d433ce39bf, type: 3}
-    - time: .74999994
-      value: {fileID: 21300000, guid: 2163617b58dc592418040cf886800b1d, type: 3}
+      value: {fileID: 21300000, guid: 6a530a8f78d2b4778a3c98b9deeb37c8, type: 3}
+    - time: .666666687
+      value: {fileID: 21300000, guid: 052c1b65c3e844b028c9e988d8940489, type: 3}
+    - time: .75
+      value: {fileID: 21300000, guid: 126d88524579d41bc881837b555fa072, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -49,11 +49,11 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .833333254
+    m_StopTime: .833333313
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

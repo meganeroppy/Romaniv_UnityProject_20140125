@@ -35,28 +35,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3798108a2bffe2b4c936cd0e904bdf3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aa47c56258df4e0f994589e9d8e137c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tex_btn_jump: {fileID: 2800000, guid: fd089d768b01d2e419147036c1adc7f0, type: 3}
-  tex_btn_slap: {fileID: 2800000, guid: 93f80381f4ae510479f720cdd095ea8b, type: 3}
-  tex_btn_pause: {fileID: 2800000, guid: 8024a9b75023ea34aa52bf7e448473a7, type: 3}
+  tex_btn_jump: {fileID: 2800000, guid: b5f00a438e63b4bfd9ab5ba82d190854, type: 3}
+  tex_btn_slap: {fileID: 2800000, guid: 0acdb6264940d488da027b65a5f2c0fc, type: 3}
+  tex_btn_pause: {fileID: 2800000, guid: 7489f8b95a128401199da22ec78328f9, type: 3}
   tex_num:
-  - {fileID: 2800000, guid: e31ad1ac7aef7a541adef18ee336d67f, type: 3}
-  - {fileID: 2800000, guid: 0fd63f0aaccd9744e8abd9e39663566c, type: 3}
-  - {fileID: 2800000, guid: feb428333de4017458b6fbc067a3daae, type: 3}
-  - {fileID: 2800000, guid: 171fce1ea4b92674aab8297e324c595f, type: 3}
-  - {fileID: 2800000, guid: c64954adf1d084240b4dae55631809ba, type: 3}
-  - {fileID: 2800000, guid: 39a338ccfcec75b49921f349f09fe510, type: 3}
-  - {fileID: 2800000, guid: cd2e0dbf80731eb469523586ec94e6ac, type: 3}
-  - {fileID: 2800000, guid: cffb347b1507ac64c832b2fec1ef5696, type: 3}
-  - {fileID: 2800000, guid: 0ab373e5a11173d48aef0f6f21db2efa, type: 3}
-  - {fileID: 2800000, guid: 0d639cc4ba3c00b42a9cb8fb7a2eeee2, type: 3}
-  tex_ke: {fileID: 2800000, guid: 157a48d15d9aad64c93db99b714fba8c, type: 3}
-  tex_hon: {fileID: 2800000, guid: 357f847874cd4e242a1dc309aa5129d3, type: 3}
-  tex_hitohada: {fileID: 2800000, guid: 615022057f60734449b9ca47dc7dd13c, type: 3}
-  tex_cm: {fileID: 2800000, guid: 55cc22912e0edca49888c8e9205ed030, type: 3}
-  PauseMenu: {fileID: 100000, guid: 8743d11cda7495144bb645bebe57119c, type: 2}
+  - {fileID: 2800000, guid: d4ded731818e0437ab3e02fd77b65122, type: 3}
+  - {fileID: 2800000, guid: a360c802ffe734d958f121f3a408b591, type: 3}
+  - {fileID: 2800000, guid: dc93c2b3771864e25af3cfae6ca7c19f, type: 3}
+  - {fileID: 2800000, guid: b24f5541bd81a4d76aab598f4a373088, type: 3}
+  - {fileID: 2800000, guid: 3467d4ca85f0042bab6372d88da1e32f, type: 3}
+  - {fileID: 2800000, guid: 48bf8b2f679e045deac670cd4e7aea6c, type: 3}
+  - {fileID: 2800000, guid: 83763910a032e4e6c92ed2a90d4407e9, type: 3}
+  - {fileID: 2800000, guid: 1c9fb02f861f04db4b070632cc9df5a8, type: 3}
+  - {fileID: 2800000, guid: 685f6a63b4ce04f2f95ddf84d94068bd, type: 3}
+  - {fileID: 2800000, guid: 787ec170c657646bbb07d2c4457996e1, type: 3}
+  tex_ke: {fileID: 2800000, guid: 83582aa3a30ac48d38710bbf58cef935, type: 3}
+  tex_hon: {fileID: 2800000, guid: b10a9670e8bb145068a5c3847624acc9, type: 3}
+  tex_hitohada: {fileID: 2800000, guid: 643dc3652e4e34c669c03ab1ce719e07, type: 3}
+  tex_cm: {fileID: 2800000, guid: 6b1d6cf5b45344324918ee772f129de1, type: 3}
+  PauseMenu: {fileID: 100000, guid: 9037bdf94db9f488c91caf8bb693520e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

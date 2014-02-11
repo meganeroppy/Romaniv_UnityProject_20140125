@@ -188,7 +188,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 31e3c650f3788a245bd47a6cb028f248, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6acd825e7392e44699b673c205992c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
 SpriteRenderer:
@@ -211,7 +211,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 5d171af35672aaf46ad884a3f079e71c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7963ed5d3149f4754bb5179b366bf41e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

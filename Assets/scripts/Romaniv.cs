@@ -17,8 +17,8 @@ public class Romaniv : MonoBehaviour {
 	private const float START_POS_X = 0.0f;
 
 	//status
-	public float speed = 80.0f;
-	public float jumpForce = 1000.0f;
+	public float speed = 7.0f;
+	public float jumpForce = 650.0f;
 
 	public enum STATUS{RUN, STOP, JUMP, SLAP, DEAD};
 	public STATUS cur_status;
@@ -38,22 +38,17 @@ public class Romaniv : MonoBehaviour {
 	//game objects
 	public GameObject attack_zone;
 	public GameObject explosion;
-	private GameObject ground;
-	private CircleCollider2D circleCollider;
+	//private CircleCollider2D circleCollider;
 	
 	private int playerLayer;
-	private int groundLayer;
 
 //	private static  Vector2 tmp;
 
 	// Use this for initialization
 	void Start () {
 		cur_j_status = JUMP_STATUS.ACSEND;
-		//playerLayer = LayerMask.NameToLayer("Player");
-		groundLayer = LayerMask.NameToLayer("Ground");
 
-		ground = GameObject.FindWithTag("ground");
-		circleCollider = this.GetComponent<CircleCollider2D>();
+		//circleCollider = this.GetComponent<CircleCollider2D>();
 
 		cur_status = STATUS.JUMP;
 		anim = GetComponent<Animator>();
@@ -79,7 +74,7 @@ public class Romaniv : MonoBehaviour {
 	
 	void FixedUpdate () {
 
-		GameController.advance = this.transform.position.x - START_POS_X ;
+		GameController.advance = (this.transform.position.x - START_POS_X) /10.0f ;
 
 //		Debug.Log("cur_status = " + cur_status.ToString());
 
@@ -192,7 +187,7 @@ public class Romaniv : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll){
 		//print ("crash with an object -> " + coll.gameObject.name.ToString());
-		if(coll.gameObject.tag == "ground"){
+		if(coll.gameObject.tag == "ground" && cur_status != STATUS.DEAD){
 			anim.SetTrigger("run_t");
 			cur_status = STATUS.RUN;
 			cur_j_status = JUMP_STATUS.ACSEND;
@@ -205,10 +200,8 @@ public class Romaniv : MonoBehaviour {
 	void explode(){
 		cur_status = STATUS.DEAD;
 		this.renderer.enabled = false;
-		this.rigidbody2D.isKinematic = true;
 		Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
 		wait_to_dispResult = Time.realtimeSinceStartup;
-		Destroy(this.gameObject.transform);
 	}
 
 	/*

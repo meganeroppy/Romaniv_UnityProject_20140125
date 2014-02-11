@@ -12,7 +12,7 @@ GameObject:
   - 95: {fileID: 9500000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2ab67253c06fb604ca1439b292b9ab2a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 939866bbe5c114531b36af49f89bbc4e, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
@@ -51,13 +51,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e4868b2d0986543b5234fbb8935bce, type: 3}
+  m_Script: {fileID: 11500000, guid: 68aa193cd373a416db1fe9ab731c4750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
-  ojisan: {fileID: 100000, guid: 7df8c9408a16a944baaf413425956289, type: 2}
-  ojichan: {fileID: 100000, guid: 4e5cd81d44c93044aacd68fdefef6760, type: 2}
-  onisan: {fileID: 100000, guid: 3eb11ceda531ff14891768c037c4e6db, type: 2}
+  duration: 1
+  ojisan: {fileID: 100000, guid: 5e7fdd29ac35b4a63b794a12ada4643f, type: 2}
+  ojichan: {fileID: 100000, guid: 33fadc72154e64539bc7d650f37ef17e, type: 2}
+  onisan: {fileID: 100000, guid: 8dbbeb7459aba4846a6aba016e0a65ab, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 5226b95382b580b42b9a1e70297fd742, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4876d2956974647de840b611ad6de33e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

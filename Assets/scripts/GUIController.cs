@@ -20,13 +20,11 @@ public class GUIController : MonoBehaviour {
 	public Texture2D tex_btn_pause;
 
 
-	private float act_btn_width = 180.0f;
-	private float act_btn_height = 120.0f;
-	private float pause_btn_size = 60.0f;
+	private float act_btn_width;// = 180.0f;
+	private float act_btn_height;// = 120.0f;
+	private float pause_btn_size;// = 60.0f;
 
 	//collected hair
-	private Rect score_field;
-	private Rect advance_field;
 
 	public Texture2D[] tex_num = new Texture2D[10];
 	public Texture2D tex_ke;
@@ -48,10 +46,11 @@ public class GUIController : MonoBehaviour {
 		romaniv = GameObject.Find("Romaniv");
 		w = GameController.w;
 		h = GameController.h;
+		act_btn_width = w * 0.22f;
+		act_btn_height = h * 0.26f;
+		pause_btn_size = w * 0.07f;
 		margin_side = GameController.margin_side;
 		margin_updown = GameController.margin_updown;
-		advance_field = new Rect(w * 0.35f, h * 0.05f, w * 0.2f, h * 0.05f);
-		score_field = new Rect(w * 0.05f, h * 0.05f, w * 0.2f, h * 0.05f);
 		size_font_score = w * 0.05f;
 	}
 	
@@ -97,11 +96,6 @@ public class GUIController : MonoBehaviour {
 		}
 
 		GUI.Box(new Rect(w * 0.14f, margin_updown, size_font_score, size_font_score), tex_hon, GUIStyle.none);
-
-
-		//GUI.TextField(score_field, "Collected Hair : " + GameController.score.ToString());
-
-		//GUI.TextField(advance_field, "advance : " + Mathf.Floor(GameController.advance).ToString() + " CM");
 
 		GUI.Box(new Rect(w * 0.2f, margin_updown * 0.5f, size_font_score * 3.0f, size_font_score * 3.0f), tex_hitohada, GUIStyle.none);
 

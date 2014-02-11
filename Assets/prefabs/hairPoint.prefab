@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 212: {fileID: 21200000}
   m_Layer: 0
-  m_Name: HairPoint
+  m_Name: hairPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,10 +36,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459f84cd497548741a716d72c256e6dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 224f69df9193a41aca339a0f66d0340c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hair: {fileID: 100000, guid: 629514e00168c344ba2ba746832dff82, type: 2}
+  hair: {fileID: 100000, guid: 126cf6729a7b54cca935895f23306a23, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

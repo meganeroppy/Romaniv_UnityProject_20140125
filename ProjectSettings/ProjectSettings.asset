@@ -6,7 +6,7 @@ PlayerSettings:
   serializedVersion: 2
   AndroidProfiler: 0
   defaultScreenOrientation: 3
-  targetDevice: 2
+  targetDevice: 0
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
@@ -19,7 +19,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_RenderingPath: 1
-  m_MobileRenderingPath: 1
+  m_MobileRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_MobileMTRendering: 0
@@ -124,6 +124,22 @@ PlayerSettings:
       m_Size: 48
     - m_Icon: {fileID: 0}
       m_Size: 36
+  - m_BuildTarget: iPhone
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: 36664a7f70e5541418c27168cf8846bf, type: 3}
+      m_Size: 152
+    - m_Icon: {fileID: 0}
+      m_Size: 144
+    - m_Icon: {fileID: 0}
+      m_Size: 120
+    - m_Icon: {fileID: 0}
+      m_Size: 114
+    - m_Icon: {fileID: 0}
+      m_Size: 76
+    - m_Icon: {fileID: 0}
+      m_Size: 72
+    - m_Icon: {fileID: 0}
+      m_Size: 57
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}

@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 60: {fileID: 6000000}
-  - 114: {fileID: 11400000}
   m_Layer: 8
   m_Name: Stage_10
   m_TagString: ground
@@ -25,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 153.342072, y: -.278568268, z: 13.4768066}
+  m_LocalPosition: {x: 0, y: 0, z: 13.4768066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,17 +96,6 @@ PolygonCollider2D:
       - {x: 9.59999943, y: -5.39999962}
       - {x: 9.59999943, y: -1.46249986}
       - {x: 8.45624924, y: -1.46249986}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27796a5d17d62a9489ce2fb925873ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -129,7 +117,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: f2df4b40192771242969a99fa24177e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad26aaec0cdff4c108ac75ad5e428cbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

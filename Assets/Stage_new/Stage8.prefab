@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 60: {fileID: 6000000}
-  - 114: {fileID: 11400000}
   m_Layer: 8
   m_Name: Stage_13
   m_TagString: ground
@@ -28,7 +27,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200002}
   - 60: {fileID: 6000002}
-  - 114: {fileID: 11400002}
   m_Layer: 8
   m_Name: Stage_8
   m_TagString: ground
@@ -131,28 +129,6 @@ PolygonCollider2D:
       - {x: 9.59999943, y: -5.39999962}
       - {x: 9.59999943, y: -1.87499988}
       - {x: 9.59999943, y: -1.87499988}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27796a5d17d62a9489ce2fb925873ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27796a5d17d62a9489ce2fb925873ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -174,7 +150,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 5d171af35672aaf46ad884a3f079e71c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7963ed5d3149f4754bb5179b366bf41e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
 SpriteRenderer:
@@ -197,7 +173,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: f2bca873d59911e45a35bb68e007f036, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0c9344a420fb4efc92f3e0cc0fba799, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

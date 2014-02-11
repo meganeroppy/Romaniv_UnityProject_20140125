@@ -17,8 +17,8 @@ public class StageMaker2 : MonoBehaviour {
 	private GameObject raycasterPrefab;
 	
 	private bool readyToMake = true;
-	public float distanceToRomaniv;
-	public float distanceToSwitch;
+	public float distanceToRomaniv = 22.0f;
+	public float distanceToSwitch = 18.8f;
 	private float switch_x;
 	private int seed;
 

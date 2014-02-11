@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 212: {fileID: 21200002}
   m_Layer: 10
-  m_Name: Hair
+  m_Name: hair
   m_TagString: hair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.20438433, y: -6290.97754, z: -10.560153}
+  m_LocalPosition: {x: -3.20438433, y: -6397.79492, z: -10.560153}
   m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,7 +66,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 89192c9a3c38137418ff89104c21b5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: e562c973fa8424660b5f49ac7807fddb, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 0
   m_AnimatePhysics: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0553f868a9e8e4e449fbf162c691fd50, type: 3}
+  m_Script: {fileID: 11500000, guid: b30916020fded41b59622ce7fe757684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21200002
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 5c1c97ef8f7fe1c4cbaf89d64115d088, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 041525125a5294d5489df934defc0518, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

@@ -35,15 +35,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728f503fdcbb37445bcdcacad60d04d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c2c172a3aec04839b675d7c1e9c301e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle:
-  - {fileID: 100000, guid: a9e50914338a98f479db31f39b422a5a, type: 2}
-  - {fileID: 100000, guid: e57251b0a42eb62478b1a7aa962a0382, type: 2}
-  - {fileID: 100000, guid: 618f2130a62d1d748a9f56119e1c1fea, type: 2}
-  - {fileID: 100000, guid: 83b0b7419dc51b74588e4090129d25c1, type: 2}
-  - {fileID: 100000, guid: e084b8987ced9e546be04cefa6a640fe, type: 2}
+  - {fileID: 100000, guid: d46c7501447fa4a3fbf77e5eb3665612, type: 2}
+  - {fileID: 100000, guid: 62267323e84b54afb8edcc8f94d2f1aa, type: 2}
+  - {fileID: 100000, guid: 8c06d5d2a77af4dff979965c40c5d916, type: 2}
+  - {fileID: 100000, guid: 7d5deb6f8e1cc4b33b1a2bfaf5d4797e, type: 2}
+  - {fileID: 100000, guid: 84f2e25284b894391b91ab21f511d8d3, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

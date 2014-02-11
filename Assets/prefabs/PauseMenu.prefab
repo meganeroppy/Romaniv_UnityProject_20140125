@@ -35,12 +35,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e997af2cd9975849aed4349bc121ac0, type: 3}
+  m_Script: {fileID: 11500000, guid: b90148c57eddb481bbf4b1b27ed89e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn_restart: {fileID: 2800000, guid: 7a10ea1d93f19df44a2b28f198d999bb, type: 3}
-  btn_resume: {fileID: 2800000, guid: c7ac3722e6f66f443a0f59d3ff9ffcb5, type: 3}
-  btn_quit2: {fileID: 2800000, guid: 4617bbed66a4dd54488c8ee792ff1933, type: 3}
+  btn_restart: {fileID: 2800000, guid: caf6a787cc88d425b8c093aea2aa953f, type: 3}
+  btn_resume: {fileID: 2800000, guid: 76316c172b67c400ea2bf1431d2ecbce, type: 3}
+  btn_quit2: {fileID: 2800000, guid: c0521182ac4bc47eab5a42e35839c459, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

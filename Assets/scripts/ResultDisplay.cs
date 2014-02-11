@@ -11,12 +11,14 @@ public class ResultDisplay : MonoBehaviour {
 	public Texture btn_retry;
 	public Texture btn_quit;
 
-	private float slct_btn_width = 360.0f;
-	private float slct_btn_height = 100.0f;
+	private float slct_btn_width;// = 360.0f;
+	private float slct_btn_height;// = 100.0f;
 	void Start () {
 		w = GameController.w;
 
 		h = GameController.h;
+		slct_btn_width = w * 0.32f;
+		slct_btn_height = h * 0.22f;
 		margin_side = GameController.margin_side;
 		margin_updown = GameController.margin_updown;
 	
