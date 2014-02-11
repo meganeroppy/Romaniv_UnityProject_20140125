@@ -20,9 +20,9 @@ public class GUIController : MonoBehaviour {
 	public Texture2D tex_btn_pause;
 
 
-	private float act_btn_width = 180.0f;
-	private float act_btn_height = 120.0f;
-	private float pause_btn_size = 60.0f;
+	private float act_btn_width;// = 180.0f;
+	private float act_btn_height;// = 120.0f;
+	private float pause_btn_size;// = 60.0f;
 
 	//collected hair
 	private Rect score_field;
@@ -48,6 +48,9 @@ public class GUIController : MonoBehaviour {
 		romaniv = GameObject.Find("Romaniv");
 		w = GameController.w;
 		h = GameController.h;
+		act_btn_width = w * 0.22f;
+		act_btn_height = h * 0.26f;
+		pause_btn_size = w * 0.07f;
 		margin_side = GameController.margin_side;
 		margin_updown = GameController.margin_updown;
 		advance_field = new Rect(w * 0.35f, h * 0.05f, w * 0.2f, h * 0.05f);
@@ -67,8 +70,6 @@ public class GUIController : MonoBehaviour {
 		if(Input.GetKey("p") && GameController.cur_scene != GameController.SCENE.PAUSE){
 			Pause();
 		}
-
-
 
 
 		//Score Display

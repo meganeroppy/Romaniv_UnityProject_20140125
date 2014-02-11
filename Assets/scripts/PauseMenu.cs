@@ -12,11 +12,13 @@ public class PauseMenu : MonoBehaviour {
 	public Texture btn_resume;
 	public Texture btn_quit2;
 	
-	private float slct_btn_width = 300.0f;
-	private float slct_btn_height = 80.0f;
+	private float slct_btn_width;// = 300.0f;
+	private float slct_btn_height;// = 80.0f;
 	void Start () {
 		w = GameController.w;
 		h = GameController.h;
+		slct_btn_width = w * 0.32f;
+		slct_btn_height = h * 0.22f;
 		margin_side = GameController.margin_side;
 		margin_updown = GameController.margin_updown;
 

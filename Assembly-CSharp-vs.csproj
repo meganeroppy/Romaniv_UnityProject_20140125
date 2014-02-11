@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\romaniv.cs" />
      <Compile Include="Assets\scripts\Attack_zone.cs" />
      <Compile Include="Assets\scripts\BG.cs" />
      <Compile Include="Assets\scripts\Btn_FB.cs" />

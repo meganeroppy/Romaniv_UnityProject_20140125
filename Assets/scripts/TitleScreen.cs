@@ -14,7 +14,7 @@ public class TitleScreen : MonoBehaviour {
 	public Texture title_logo;
 	private float logo_width;
 	private float logo_height;
-
+	
 	//run
 //	public Texture btn_run;
 	public Texture btn_run;
@@ -51,7 +51,7 @@ public class TitleScreen : MonoBehaviour {
 //		var textureAspectRaito = btn_run.height / btn_run.width;
 //		btn_run_width = w * buttonLatio;
 //		btn_run_height = btn_run_width * buttonLatio;
-		btn_run_width = w;
+		btn_run_width = w * 0.65f;
 		btn_run_height = h * 0.3f;
 
 		mini_btn_width = w * 0.12f;
@@ -64,11 +64,12 @@ public class TitleScreen : MonoBehaviour {
 //		btn_run_width = w * buttonLatio;
 //		btn_run_height = btn_run_width * buttonLatio;
 	}
-
+	/*0.7f*/
 	void OnGUI(){
-		GUI.DrawTexture(new Rect(Screen.width * 0.5f - (logo_width * 0.5f), 0, logo_width, logo_height), title_logo);
+		GUI.DrawTexture(new Rect( Screen.width * 0.5f - (logo_width * 0.5f) , 0, logo_width, logo_height), title_logo);
 
-		if(GUI.Button(new Rect(w * 0.7f - (btn_run_width * 0.5f), h * 0.28f, btn_run_width, btn_run_height), btn_run, GUI_btn_run)){//
+
+		if(GUI.Button(new Rect( w *  0.5f - (btn_run_width * 0.5f)  , h * 0.28f, btn_run_width, btn_run_height), btn_run, GUI_btn_run)){//
 			print ("RUN!");
 			Application.LoadLevel("run");
 		}
